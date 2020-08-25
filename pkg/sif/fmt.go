@@ -253,6 +253,7 @@ func (fimg *FileImage) FmtDescrInfo(id uint32) string {
 				s += fmt.Sprintln("  Fmttype:  ", formattypeStr(f))
 				s += fmt.Sprintln("  Msgtype:  ", messagetypeStr(m))
 			}
+			s += fmt.Sprintln("  Extra:    ", trimZeroBytes(v.Extra[:]))
 
 			return s
 		}
